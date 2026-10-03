@@ -2,6 +2,9 @@
   "name": "onsite-property-support",
   "private": true,
   "type": "module",
+  "scripts": {
+    "dev": "node scripts/preview.mjs"
+  },
   "dependencies": {
     "resend": "^6.0.0"
   }
