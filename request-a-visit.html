@@ -13,8 +13,8 @@
 <header>
   <div class="wrap navbar">
     <a class="brand" href="/">ON-SITE PROPERTY SUPPORT<small>COMMERCIAL FIELD DOCUMENTATION</small></a>
-    <button class="menu" data-menu aria-label="Open menu">Menu</button>
-    <nav>
+    <button class="menu" data-menu aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false">Menu</button>
+    <nav id="primary-navigation">
       <a href="/services">Services</a>
       <a href="/how-it-works">How It Works</a>
       <a href="/pricing">Pricing</a>
@@ -37,15 +37,15 @@
   </div>
   <form data-request-form>
     <div class="form-grid">
-      <div><label>Name</label><input name="name" required></div>
-      <div><label>Company</label><input name="company" required></div>
-      <div><label>Email</label><input name="email" type="email" required></div>
-      <div><label>Phone</label><input name="phone" type="tel"></div>
-      <div class="full"><label>Property</label><input name="property" placeholder="Address or property name" required></div>
-      <div><label>Visit type</label><select name="serviceType" required><option value="">Select</option><option>Exterior</option><option>Interior</option><option>Exterior + Interior</option><option>Custom Field Support</option></select></div>
-      <div><label>Timing</label><input name="timing" placeholder="Preferred date / timing"></div>
-      <div class="full"><label>Access notes</label><textarea name="accessNotes"></textarea></div>
-      <div class="full"><label>Message</label><textarea name="message" required></textarea></div>
+      <div><label for="request-name">Name</label><input id="request-name" name="name" required></div>
+      <div><label for="request-company">Company</label><input id="request-company" name="company" required></div>
+      <div><label for="request-email">Email</label><input id="request-email" name="email" type="email" required></div>
+      <div><label for="request-phone">Phone</label><input id="request-phone" name="phone" type="tel"></div>
+      <div class="full"><label for="request-property">Property</label><input id="request-property" name="property" placeholder="Address or property name" required></div>
+      <div><label for="request-service">Visit type</label><select id="request-service" name="serviceType" required><option value="">Select</option><option>Exterior</option><option>Interior</option><option>Exterior + Interior</option><option>Custom Field Support</option></select></div>
+      <div><label for="request-timing">Timing</label><input id="request-timing" name="timing" placeholder="Preferred date / timing"></div>
+      <div class="full"><label for="request-access">Access notes</label><textarea id="request-access" name="accessNotes"></textarea></div>
+      <div class="full"><label for="request-message">Message</label><textarea id="request-message" name="message" required></textarea></div>
       <div style="display:none"><input name="website" tabindex="-1" autocomplete="off"></div>
       <div class="full"><button type="submit">Send Request</button><div class="status" data-status aria-live="polite"></div></div>
     </div>

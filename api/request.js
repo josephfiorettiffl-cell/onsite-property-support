@@ -1,15 +1,20 @@
 
 import { Resend } from 'resend';
+
 const resend = new Resend(process.env.RESEND_API_KEY);
 const clean = (v='') => String(v).trim().slice(0,4000);
 
-export async function POST(request) {
-  try {
+export async function POST(request){
+  try{
     const body = await request.json();
-    if (clean(body.website)) return Response.json({ok:true});
-    for (const f of ['name','company','email','property','serviceType','message']) {
-      if (!clean(body[f])) return Response.json({error:`Missing ${f}.`},{status:400});
+    if(clean(body.website)) return Response.json({ok:true});
+
+    for(const field of ['name','company','email','property','serviceType','message']){
+      if(!clean(body[field])){
+        return Response.json({error:`Missing ${field}.`},{status:400});
+      }
     }
+
     const text = [
       `Name: ${clean(body.name)}`,
       `Company: ${clean(body.company)}`,
@@ -33,9 +38,10 @@ export async function POST(request) {
       subject:`Request a Visit — ${clean(body.property).slice(0,120)}`,
       text
     });
-    if (error) return Response.json({error:'Message service error.'},{status:502});
+
+    if(error) return Response.json({error:'Message service error.'},{status:502});
     return Response.json({ok:true});
-  } catch {
+  }catch{
     return Response.json({error:'Invalid request.'},{status:400});
   }
 }
