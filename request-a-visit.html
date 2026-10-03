@@ -1,52 +1,62 @@
 <!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#14181c">
 <title>Request a Visit | On-Site Property Support</title>
-<meta name="description" content="Request a commercial property documentation visit.">
+<meta name="description" content="Request a commercial property field visit from On-Site Property Support.">
 <link rel="stylesheet" href="/assets/site.css">
 </head><body>
-<div class="topbar"><div class="wrap">
-  <div><a href="tel:+17346568652">734-656-8652</a> &nbsp;·&nbsp; <a href="mailto:service@onsitepropertysupport.com">service@onsitepropertysupport.com</a></div>
+<div class="utility"><div class="wrap">
+  <div><a href="tel:+17346568652">734-656-8652</a> · <a href="mailto:service@onsitepropertysupport.com">service@onsitepropertysupport.com</a></div>
   <div>Livonia · Plymouth · Canton</div>
 </div></div>
-<header><div class="wrap nav">
-  <a class="brand" href="/">ON-SITE PROPERTY SUPPORT<small>COMMERCIAL FIELD DOCUMENTATION</small></a>
-  <button class="mobile-toggle" data-menu-toggle>Menu</button>
-  <nav>
-    <a href="/services">Services</a>
-    <a href="/pricing">Pricing</a>
-    <a href="/sample-report">Sample Report</a>
-    <a href="/service-area">Service Area</a>
-    <a href="/about">About</a>
-    <a class="btn" href="/request-a-visit">Request a Visit</a>
-  </nav>
-</div></header>
+<header>
+  <div class="wrap navbar">
+    <a class="brand" href="/">ON-SITE PROPERTY SUPPORT<small>COMMERCIAL FIELD DOCUMENTATION</small></a>
+    <button class="menu" data-menu aria-label="Open menu">Menu</button>
+    <nav>
+      <a href="/services">Services</a>
+      <a href="/how-it-works">How It Works</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/sample-report">Sample Report</a>
+      <a href="/service-area">Service Area</a>
+      <a href="/about">About</a>
+      <a class="nav-cta" href="/request-a-visit">Request a Visit</a>
+    </nav>
+  </div>
+</header>
 
 <main>
-<section class="page-hero"><div class="wrap"><div class="eyebrow">Request a visit</div><h1>Tell us what you need documented.</h1><p>We’ll reply with scope, timing, and a starting price.</p></div></section>
-<section><div class="wrap form">
-<form data-request-form>
-<div class="form-grid">
-<div><label>Name</label><input name="name" required></div>
-<div><label>Company</label><input name="company" required></div>
-<div><label>Email</label><input name="email" type="email" required></div>
-<div><label>Phone</label><input name="phone" type="tel"></div>
-<div class="full"><label>Property</label><input name="property" placeholder="Address or property name" required></div>
-<div><label>Visit type</label><select name="serviceType" required><option value="">Select</option><option>Exterior</option><option>Interior</option><option>Exterior + Interior</option><option>Custom Field Support</option></select></div>
-<div><label>Timing</label><input name="timing" placeholder="Preferred date / timing"></div>
-<div class="full"><label>Access notes</label><textarea name="accessNotes"></textarea></div>
-<div class="full"><label>Message</label><textarea name="message" required></textarea></div>
-<div style="display:none"><input name="website" tabindex="-1" autocomplete="off"></div>
-<div class="full"><button type="submit">Send Request</button><div class="status" data-form-status aria-live="polite"></div></div>
-</div>
-</form>
-<p class="muted">Prefer phone or email? 734-656-8652 · service@onsitepropertysupport.com</p>
+<section class="page-hero"><div class="wrap"><div class="kicker">Request a visit</div><h1>Send the property.</h1><p>We’ll reply with scope, timing, and a starting price.</p></div></section>
+<section><div class="wrap form-shell">
+  <div>
+    <div class="kicker">Direct contact</div>
+    <h2 style="font-size:clamp(2rem,4vw,3.8rem);line-height:1;margin:.3em 0">734-656-8652</h2>
+    <p><a href="mailto:service@onsitepropertysupport.com">service@onsitepropertysupport.com</a></p>
+    <p>Primary area: Livonia, Plymouth, Canton.</p>
+  </div>
+  <form data-request-form>
+    <div class="form-grid">
+      <div><label>Name</label><input name="name" required></div>
+      <div><label>Company</label><input name="company" required></div>
+      <div><label>Email</label><input name="email" type="email" required></div>
+      <div><label>Phone</label><input name="phone" type="tel"></div>
+      <div class="full"><label>Property</label><input name="property" placeholder="Address or property name" required></div>
+      <div><label>Visit type</label><select name="serviceType" required><option value="">Select</option><option>Exterior</option><option>Interior</option><option>Exterior + Interior</option><option>Custom Field Support</option></select></div>
+      <div><label>Timing</label><input name="timing" placeholder="Preferred date / timing"></div>
+      <div class="full"><label>Access notes</label><textarea name="accessNotes"></textarea></div>
+      <div class="full"><label>Message</label><textarea name="message" required></textarea></div>
+      <div style="display:none"><input name="website" tabindex="-1" autocomplete="off"></div>
+      <div class="full"><button type="submit">Send Request</button><div class="status" data-status aria-live="polite"></div></div>
+    </div>
+  </form>
 </div></section>
 </main>
 
-<div class="cta"><div class="wrap">
-  <div><div class="eyebrow">Need local eyes on a property?</div><h2>Request a visit.</h2></div>
+<section class="cta"><div class="wrap cta-grid" data-reveal>
+  <div><div class="kicker">Need local eyes on a property?</div><h2>Send the address.</h2></div>
   <a class="btn white" href="/request-a-visit">Request a Visit</a>
-</div></div>
+</div></section>
 <footer><div class="wrap">
   <div>
     <strong>On-Site Property Support</strong><br>
@@ -56,5 +66,6 @@
   </div>
   <div class="legal">Primary: Livonia · Plymouth · Canton<br>Nearby requests considered case by case.</div>
 </div></footer>
+<div class="mobile-cta"><a class="btn" href="/request-a-visit">Request a Visit</a></div>
 <script src="/assets/site.js"></script>
 </body></html>
